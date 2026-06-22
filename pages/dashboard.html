@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Dashboard Produksi Desa</h1>
+
+</header>
+
+<div style="width:700px; margin:auto;">
+
+<canvas id="myChart"></canvas>
+
+</div>
+
+<script>
+
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+
+type: 'bar',
+
+data: {
+
+labels: [
+'Pertanian',
+'Perikanan',
+'Peternakan'
+],
+
+datasets: [{
+
+label: 'Produksi',
+
+data: [120,15,80]
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
